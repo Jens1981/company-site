@@ -1,0 +1,30 @@
+
+.header {
+  position: relative;
+  padding: 20px 0 $base;
+  background: $dk-blue $bg-header no-repeat center center;
+  background-size: cover;
+  text-align: center;
+
+  @include bp-min-width($xsmall) {
+  }
+}
+
+.header .contact-info {
+  margin-bottom: 18px;
+  color: #fff;
+  font-weight: $med;
+  line-height: 1;
+
+  @include bp-max-width($tiny) {
+    @include font-size(15px);
+  }
+}
+
+.header .contact-info .phone-label {
+  @include bp-max-width($tiny) {
+    display: none;
+  }
+}
+
+

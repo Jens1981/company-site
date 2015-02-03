@@ -1,0 +1,143 @@
+
+.main-nav {
+  @include cf;
+  text-align: center;
+
+  @include bp-min-width($large) {
+    position: absolute;
+    left: 0;
+    right: 16px;
+    bottom: 0;
+  }
+}
+
+.menu-main-menu-container {
+  @include bp-max-width($medium) {
+    display: none;
+    
+    &.show {
+      display: block;
+      width: 100%;
+      clear: both;
+    }
+  }
+}
+
+.main-nav li {
+  @include bp-min-width($medium) {
+    display: inline-block;
+    margin: 0 36px;
+  }
+}
+
+.main-nav li:nth-child(2) {
+  @include bp-min-width($large) {
+    margin-right: 346px;
+  }
+}
+
+.main-nav li a {
+  @include font-size(17px);
+  display: block;
+  color: $grey;
+  font-weight: $med;
+
+  @include bp-max-width($medium) {
+    padding: 12px;
+    color: #fff;
+    background: $dk-grey;
+  }
+
+  @include bp-min-width($medium) {
+    padding: $base 0 20px;
+  }
+  
+  &:hover {
+    @include bp-max-width($large) {
+      color: #fff;
+    }
+
+    @include bp-min-width($large) {
+      box-shadow: inset 0 -4px 0 $green;
+      color: $dk-grey;
+    }
+  }
+}
+
+
+/** Mobile Menu Button **/
+
+.btn-mobile {
+  display: block;
+  padding: 12px $base;
+  background: $grey;
+  color: #fff;
+  
+  &.active {
+    background: $dk-grey;
+  }
+    
+  @include bp-min-width($medium) {
+    display: none;
+  }
+}
+
+.btn-mobile .menu-label {
+  @include font-size(15px);
+  margin-left: 6px;
+  font-weight: $bold;
+  text-transform: uppercase;
+}
+
+.btn-mobile .icon-menu {
+  position: relative;
+  display: inline-block;
+  vertical-align: -2px;
+  width: 20px;
+  height: 16px;
+  background: none;
+
+  .bar {
+    @include global-transition;
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-bottom: 3px;
+    background: #fff;
+  }
+
+  &:nth-child(1) {
+    transform: rotate(0);
+  }
+  
+  &:nth-child(2) {
+    transform: rotate(0);
+  }
+  
+  &:nth-child(3) {
+    opacity: 1;
+  }
+}
+
+.btn-mobile.active .icon-menu {
+  height: 9px;
+}
+
+.btn-mobile.active .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  
+  &:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  &:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+  
+  &:nth-child(3) {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,41 @@
+
+.single-post .hero {
+  padding: $base 0;
+}
+
+.post {
+
+}
+
+.post .post-date {
+}
+
+.post figure {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.post figcaption {
+  padding-top: 12px;
+}
+
+.post-nav {
+  @include font-size(18px);
+  padding: 18px 0;
+  background: lighten($lt-grey, 6%);
+  text-align: center;
+
+  @include bp-min-width($large) {
+    @include font-size(21px);
+  }
+  
+  .post-nav-item {
+  }
+  
+  a {
+  }
+  
+  .bullet {
+    margin: 0 10px;
+  }
+}

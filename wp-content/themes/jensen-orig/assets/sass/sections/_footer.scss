@@ -1,0 +1,71 @@
+
+.footer {
+  @include font-size(16px);
+  position: relative;
+  font-weight: $med;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    @include font-size(18px);
+  }
+
+  .wrapper {
+    position: relative;
+    padding: $base*1 0 $base*4.5;
+
+    @include bp-min-width($large) {
+      padding: $base*2 0;
+    }
+  }
+}
+
+.footer a {
+  color: $grey;
+  
+  &:hover {
+    color: $dk-grey;
+  }
+}
+
+.footer-nav {
+  margin-bottom: $base;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 0 12px;
+
+  @include bp-min-width($medium) {
+    margin: 0 20px;
+  }
+}
+
+.footer .contact-info {
+  color: $md-grey;
+}
+
+.footer .phone-number {
+  @include bp-max-width($small) {
+    display: block;
+  }
+}
+
+.footer .bullet {
+  @include bp-max-width($small) {
+    display: none;
+  }
+}
+
+.footer .logo-bbg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px 14px;
+  background: #fff;
+
+  @include bp-max-width($large) {
+    left: 0;
+  }
+  
+}
+

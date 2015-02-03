@@ -1,0 +1,85 @@
+
+.learn-more-section .wrapper {
+  @include cf;
+  padding: 0 20px $base*2;
+}
+
+.learn-more-section .section-title {
+  margin-bottom: $base*1.5;
+  padding-top: $base*1.5;
+  border-top: 2px solid $lt-grey;
+}
+
+.learn-more-grid {
+  max-width: 960px;
+  margin: 0 auto;
+
+  @include bp-max-width($large) {
+    text-align: center;
+  }
+}
+
+.learn-more-grid .col-1-3 {
+
+  @include bp-min-max($medium, $large) {
+    display: inline-block;
+    width: 45%;
+    margin: 0 2% $base;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.learn-more-grid a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba($dk-blue, 0.6);
+  color: #fff;
+  
+  &:hover {
+    background: rgba($dk-blue, 0.8);
+  }
+}
+
+.learn-more-grid .col-wrap {
+  position: relative;
+  max-width: 320px;
+  min-height: 174px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.learn-more-grid .meet-team-block .col-wrap {
+  background: $learn-more-01 no-repeat center center / cover;
+}
+
+.learn-more-grid .history-block .col-wrap {
+  background: $learn-more-02 no-repeat center center / cover;
+}
+
+.learn-more-grid .contact-block .col-wrap {
+  background: $learn-more-03 no-repeat center center / cover;
+}
+
+.learn-more-grid .services-block .col-wrap {
+  background: $learn-more-04 no-repeat center center / cover;
+}
+
+.learn-more-grid .block-title {
+  @include absolute-center;
+  @include font-size(24px);
+  width: 100%;
+  padding: 0 15%;
+  line-height: 1;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    @include font-size(40px);
+  }
+}
+

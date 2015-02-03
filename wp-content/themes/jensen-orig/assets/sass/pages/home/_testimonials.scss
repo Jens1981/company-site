@@ -1,0 +1,33 @@
+
+.testimonials .wrapper {
+  padding: $base*2 0 $base*1.5;
+
+  @include bp-min-width($medium) {
+    padding: $base*4 20px;
+  }
+}
+
+.testimonial {
+  padding: 0 20px;
+}
+
+.testimonials-slider {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include bp-min-width($large) {
+    padding: 0 100px;
+  }
+}
+
+.testimonials-slider .owl-prev {
+  left: 8px;
+}
+
+.testimonials-slider .owl-next {
+  right: 8px;
+}
+
+
+

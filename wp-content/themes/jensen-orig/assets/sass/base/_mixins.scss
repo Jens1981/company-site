@@ -1,0 +1,108 @@
+
+// Site Mixins
+
+@mixin width-12-col {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+@mixin width-10-col {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+@mixin width-8-col {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+@mixin width-6-col {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+@mixin title-double-border {
+  padding: $base 0;
+  border-top: 2px solid $lt-grey;
+  border-bottom: 2px solid $lt-grey;
+}
+
+
+// Clearfix
+@mixin cf {
+  &:before, &:after {
+    content: " ";
+    display: block;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom:1;
+}
+
+// GLOBAL TRANSITION
+@mixin global-transition {
+	@include transition(all 0.15s ease-in);
+}
+
+
+// CENTER ALIGN
+@mixin vertical-center($position) {
+  @include translateY(-50%);
+  position: $position;
+  top: 50%;
+}
+
+@mixin horizontal-center($position) {
+  @include translateX(-50%);
+  position: $position;
+  left: 50%;
+}
+
+@mixin absolute-center {
+  @include translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+// REMs
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@function calculateEm($size) {
+  $emSize: $size / 16px;
+  @return $emSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($size) {
+  line-height: $size;
+  line-height: calculateEm($size);
+}
+
+
+// TRIANGLE
+@mixin down-triangle($size, $color) {
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
+}
+
+@mixin up-triangle($size, $color) {
+  width: 0;
+  height: 0;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: $size solid $color;
+}
+

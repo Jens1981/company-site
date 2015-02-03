@@ -1,0 +1,99 @@
+
+.page-id-9 .page-hero {
+  background: $dk-blue $hero-services no-repeat center center / cover;
+}
+
+.services-hero {
+  position: relative;
+
+  &.heating-hero {
+    background: $dk-blue $hero-services-01 no-repeat center center / cover;
+  }
+
+  &.cooling-hero {
+    background: $dk-blue $hero-services-02 no-repeat center center / cover;
+  }
+
+  &.indoor-air-hero {
+    background: $dk-blue $hero-services-03 no-repeat center center / cover;
+  }
+}
+
+.services-hero:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  width: 4px;
+  height: 80px;
+  background: $lt-grey;
+
+  @include bp-min-width($large) {
+    height: 120px;
+  }
+}
+
+.services-hero .hero-title:first-of-type:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin: 20px auto 16px;
+  background: #fff;
+}
+
+.services-content .wrapper {
+  padding: $base*3 5% $base*2;
+  text-align: center;
+
+  @include bp-min-width($large) {
+    padding: $base*3 5%;
+  }
+}
+
+.services-content p {
+  display: inline-block;
+  max-width: 620px;
+  margin-bottom: 1.5em;
+  
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.services-list .wrapper {
+  padding: $base*2.5 5%;
+}
+
+.services-list h2:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  margin-top: 20px;
+  background: $lt-grey;
+}
+
+.services-list ul {
+  @include font-size(21px);
+  @include line-height(28px);
+  
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.services-grid {
+  margin-bottom: $base;
+  padding: 0 2%;
+
+  @include bp-min-width($large) {
+    margin-bottom: $base*4;
+  }
+}
+
+.services-list .emergency-block {
+  @include width-10-col;
+}
+

@@ -1,0 +1,50 @@
+
+@mixin btn {
+  @include font-size(18px);
+  position: relative;
+  top: 0;
+  display: inline-block;
+  padding: 0.75em 2em;
+  background: $blue;
+  box-shadow: 0 8px $md-blue;
+  color: #fff;
+  
+  &:hover {
+    top: 4px;
+    box-shadow: 0 4px $md-blue;
+    color: #fff;
+  }
+  
+  &:active {
+    top: 6px;
+    box-shadow: 0 2px $md-blue;
+  }
+}
+
+a {
+  @include global-transition;
+	color: $blue;
+	
+	&:hover {
+	  color: $dk-blue;
+	}
+}
+
+.btn {
+  @include btn;
+  
+  &.red {
+    background: $red;
+    box-shadow: 0 8px $dk-red;
+    
+    &:hover {
+      top: 4px;
+      box-shadow: 0 4px $dk-red;
+    }
+    
+    &:active {
+      top: 6px;
+      box-shadow: 0 2px $dk-red;
+    }
+  }
+}

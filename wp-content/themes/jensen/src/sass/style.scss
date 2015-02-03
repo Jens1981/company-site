@@ -1,0 +1,30 @@
+/*!
+Theme Name: Jensen Ecology v1
+Theme URI: http://html5reset.org
+Description: A custom theme for Jensen Ecology based on HTML 5 Reset theme
+Author: Brad Sawicki
+Author URI: http://bradsawicki.com
+Version: 1.0
+*/
+
+@import "base/reset";
+@import "base/mixins";
+@import "base/media-queries";
+@import "base/colors";
+@import "base/typography";
+@import "base/images";
+@import "base/icons";
+@import "base/grid";
+@import "base/layout";
+@import "base/buttons";
+@import "base/forms";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/nav";
+
+@import "pages/home";
+@import "pages/blog";
+
+@import "components/hero";
+@import "components/featured-posts";

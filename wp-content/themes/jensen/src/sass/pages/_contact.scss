@@ -1,0 +1,176 @@
+
+.contact-info .wrapper {
+}
+
+.contact-phone-email {
+  @include width-10-col;
+  @include cf;
+  margin-bottom: $base*2;
+
+  .col-1-2 {
+    text-align: center;
+  }
+}
+
+.contact-phone-email h3 {
+  @include font-size(21px);
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+  }
+}
+
+.contact-phone-email .phone-number,
+.contact-phone-email .email-address {
+  @include font-size(30px);
+  margin-bottom: 18px;
+  line-height: 1;
+  font-weight: $light;
+
+  @include bp-min-width($medium) {
+    @include font-size(40px);
+  }
+}
+
+.email-info {
+  @include font-size(21px);
+
+  @include bp-min-width($medium) {
+    @include font-size(24px);
+  }
+}
+
+.contact-info .emergency-block {
+  @include width-10-col;
+}
+
+.our-location {
+  padding-top: $base*2;
+  text-align: center;
+  
+  p {
+    @include font-size(21px);
+    margin-bottom: $base*1.5;
+
+    @include bp-min-width($medium) {
+      @include font-size(24px);
+    }
+  }
+  
+  a {
+    @include btn;
+    line-height: 1;
+  }
+}
+
+.contact-map {
+  min-height: 200px;
+  background: $contact-map no-repeat center center / cover;
+
+  @include bp-min-width($medium) {
+    min-height: 280px;
+  }
+}
+
+.contact-service-area {
+  .section-title {
+    margin-bottom: $base;
+    padding-bottom: $base;
+    border-bottom: 2px solid $lt-grey;
+  }
+  
+  .service-area-intro {
+    @include width-6-col;
+    margin-bottom: $base;
+
+    @include bp-min-width($medium) {
+      margin-bottom: $base*2;
+    }
+  }
+  
+  p {
+    @include font-size(21px);
+    margin-bottom: $base*2;
+    text-align: center;
+
+    @include bp-min-width($medium) {
+      @include font-size(24px);
+    }
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contact-service-area .service-area-list {
+  @include cf;
+
+  @include bp-min-width($medium) {
+    padding-left: 5%;
+  }
+  
+  p {
+    @include font-size(18px);
+    float: left;
+    width: 50%;
+    margin-bottom: $base;
+    text-align: left;
+
+    @include bp-min-width($medium) {
+      @include font-size(21px);
+      width: 25%;
+    }
+  }
+}
+
+.service-view-area {
+  @include font-size(18px);
+  padding-top: $base;
+  text-align: center;
+}
+
+.general-inquiries .section-title {
+  @include title-double-border;
+}
+
+.general-inquiries-intro {
+  @include width-6-col;
+  margin-bottom: $base*1.5;
+  text-align: center;
+}
+
+.general-inquiries .wpcf7 {
+  @include width-10-col;
+  position: relative;
+
+  @include bp-min-width($large) {
+    padding-right: 500px;
+    padding-bottom: 60px;
+  }
+  
+  .form-message {
+    @include bp-min-width($large) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 470px;
+    }
+  }
+  
+  textarea {
+    min-height: 190px;
+  }
+  
+  .form-button {
+    @include bp-min-width($large) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+

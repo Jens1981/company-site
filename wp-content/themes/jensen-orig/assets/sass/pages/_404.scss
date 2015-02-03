@@ -1,0 +1,18 @@
+
+.main-404 {
+  text-align: center;
+  
+  h3 {
+    @include font-size(30px);
+    padding-bottom: $base;
+  }
+  
+  ul {
+    margin-bottom: $base*2;
+  }
+  
+  li {
+    @include font-size(21px);
+    @include line-height(32px);
+  }
+}

@@ -1,0 +1,43 @@
+
+.footer {
+  @include font-size(16px);
+  position: relative;
+  text-align: center;
+  background: $dk-grey;
+  color: #fff;
+
+  @include bp-min-width($medium) {
+    @include font-size(12px);
+  }
+
+  .wrapper {
+    position: relative;
+    padding: $base*1 0 $base*4.5;
+
+    @include bp-min-width($large) {
+      padding: $base*2 0;
+    }
+  }
+}
+
+.footer a {
+  color: #fff;
+  
+  &:hover {
+    color: $lt-grey;
+  }
+}
+
+.footer-nav {
+  margin-bottom: $base;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin: 0 12px;
+
+  @include bp-min-width($medium) {
+    margin: 0 20px;
+  }
+}
+

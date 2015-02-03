@@ -1,0 +1,21 @@
+
+.hero {
+  padding: $base*2 0;
+  background: $dk-blue;
+  color: #fff;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    padding: $base*4 0;
+  }
+  
+  .hero-title {
+    @include width-10-col;
+  }
+}
+
+.page-hero {
+  @include bp-min-width($large) {
+    padding: $base*6.5 0;
+  }
+}

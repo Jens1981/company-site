@@ -1,0 +1,74 @@
+
+.hero-slider {
+  @include cf;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+
+}
+
+.hero-slider .slide {
+  position: relative;
+  z-index: 1;
+  padding: $base*3 4%;
+  background: $dk-blue $hero-home-01 no-repeat center center / cover;
+
+  @include bp-min-width($large) {
+    padding: $base*7.25 0;
+  }
+}
+
+.hero-slider .slide-2 {
+  background-image: $hero-home-02;
+}
+
+.hero-slider .slide-3 {
+  background-image: $hero-home-03;
+}
+
+.hero-slider .slide-4 {
+  background-image: $hero-home-04;
+}
+
+.hero-slider .owl-controls {
+  display: none;
+
+  @include bp-min-width($large) {
+    display: block;
+  }
+}
+
+.hero-slider .owl-prev {
+  left: 5%;
+}
+
+.hero-slider .owl-next {
+  right: 5%;
+}
+
+.hero-slider .slide-content {
+  display: inline-block;
+  max-width: 720px;
+}
+
+.hero-slider .slide-4 .slide-content {
+  max-width: 940px;
+}
+
+.hero-slider h1 {
+  margin-bottom: $base*2;
+  color: #fff;
+}
+
+.hero-slider p {
+  margin-bottom: 6px;
+}
+
+.hero-slider .slide a {
+  @extend .btn;
+  @extend .red;
+  @include font-size(27px);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}

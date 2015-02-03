@@ -1,0 +1,24 @@
+
+.hero {
+  padding: $base*2 0;
+  background: $green;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+  @include bp-min-width($medium) {
+    padding: $base*4 0;
+  }
+  
+  h1,h2,p {
+    @include width-8-col;
+    
+    &:first-child {
+      margin-bottom: $base*1.5;
+    }
+  }
+  
+  a {
+    @include btn-white;
+  }
+}

@@ -1,0 +1,51 @@
+/*!
+Theme Name: Stadtler Custom v1 Orig
+Theme URI: http://html5reset.org
+Description: A custom theme for Stadtler HVAC based on HTML 5 Reset theme
+Author: Brad Sawicki
+Author URI: http://bradsawicki.com
+Version: 1.0
+*/
+
+@import "compass";
+
+@import "base/reset";
+@import "base/mixins";
+@import "base/media-queries";
+@import "base/colors";
+@import "base/typography";
+@import "base/images";
+@import "base/icons";
+@import "base/grid";
+@import "base/layout";
+@import "base/buttons";
+@import "base/forms";
+
+@import "sections/header";
+@import "sections/footer";
+@import "sections/nav";
+
+@import "pages/home/hero-slider";
+@import "pages/home/intro";
+@import "pages/home/about";
+@import "pages/home/testimonials";
+@import "pages/services";
+@import "pages/products";
+@import "pages/history";
+@import "pages/blog";
+@import "pages/team";
+@import "pages/contact";
+@import "pages/archives";
+@import "pages/404";
+
+@import "components/hero";
+@import "components/owl-slider";
+@import "components/modal";
+@import "components/promo-section";
+@import "components/testimonials";
+@import "components/featured-posts";
+@import "components/filters";
+@import "components/learn-more";
+@import "components/rate-us";
+@import "components/emergency-block";
+

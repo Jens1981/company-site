@@ -1,0 +1,121 @@
+
+.has-modal {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: auto;
+  height: auto;
+  background: $dk-blue;
+  background: rgba($dk-blue, 0.88);
+  
+  &.is-active {
+    display: block;
+  }
+}
+
+.modal-wrap {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+
+  @include bp-min-width($medium) {
+    top: 8%;
+    left: 50%;
+    bottom: auto;
+    max-width: 620px;
+/*     max-height: 90%; */
+    margin-left: -310px;
+  }
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-header {
+  padding: $base 20px $base*1.5;
+}
+
+.modal-content .phone-number {
+    @include font-size(46px);
+    color: $md-blue;
+    line-height: 1;
+}
+
+.modal-content .emergency-block {
+  position: relative;
+  padding: $base 5% $base*1.5;
+  
+  &:after {
+    @include up-triangle(10px, $red);
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+  }
+}
+
+.modal-form {
+  padding: $base*1.5 5%;
+  text-align: center;
+  
+  p {
+    @include font-size(24px);
+    @include line-height(32px);
+    margin-bottom: $base;
+  }
+  
+  form {
+    @include width-6-col;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  
+  &:hover .close-bar {
+    background: $blue;
+  }
+  
+  .close-bar {
+    @include global-transition;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: #fff;
+    
+    &:first-child {
+      @include transform(rotate(-45deg));
+      left: 0;
+    }
+
+    &:last-child {
+      @include transform(rotate(45deg));
+      right: 0;
+    }
+  }
+}
+

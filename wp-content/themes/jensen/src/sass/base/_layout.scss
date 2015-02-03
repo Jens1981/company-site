@@ -1,0 +1,46 @@
+body {
+  background: #fff;
+}
+
+.container {
+  @include bp-min-width($medium) {
+    @include cf;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  @include cf;
+  margin: 0 4%;
+
+  @include bp-min-width($medium) {
+    width: 92%;
+    max-width: 1208px;
+    margin: 0 auto;
+  }
+  
+  &.padded {
+    padding: $base*3 0;
+  }
+}
+
+.main .wrapper {
+  padding: $base*1.5 20px;
+
+  @include bp-min-width($medium) {
+    padding: $base*2 20px;
+  }
+}
+
+.page-template-default .body {
+  @include width-8-col;
+}
+
+.mobile-visible {
+  visibility: visible;
+}
+
+.mobile-hidden {
+  visibility: hidden;
+}

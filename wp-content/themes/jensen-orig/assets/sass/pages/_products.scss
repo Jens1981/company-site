@@ -1,0 +1,96 @@
+
+.page-id-11 .hero {
+  background: $dk-blue $hero-products no-repeat center center / cover;
+}
+
+.featured-product .wrapper {
+  padding: $base 20px;
+  
+  @include bp-min-width($large) {
+    padding: $base 20px $base*3;
+  }
+}
+
+.featured-product .section-title {
+  margin-bottom: $base;
+  padding-bottom: $base;
+  border-bottom: 2px solid $lt-grey;
+}
+
+.featured-product-grid {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.featured-product .product-title {
+  @extend h2;
+  color: $blue;
+  max-width: 940px;
+  margin: 0 auto $base;
+
+  @include bp-min-width($large) {
+    padding-right: 31%;
+  }
+}
+
+.featured-product .product-image {
+  margin-bottom: $base;
+  border: 2px solid $lt-grey;
+  text-align: center;
+}
+
+.product-features {
+  @include bp-min-width($large) {
+    padding-left: 40px;
+  }
+  
+  h4 {
+    margin-bottom: $base;
+    
+    @include bp-min-width($medium) {
+      margin-bottom: $base*1.5;
+    }
+    
+    &:after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 1px;
+      margin: 12px 0 $base;
+      background: $livid;
+    }
+  }
+  
+  p {
+    @include font-size(16px);
+    @include line-height(24px);
+    margin-bottom: 1em;
+  }
+  
+  strong {
+    font-weight: $med;
+  }
+}
+
+.our-brands .wrapper {
+  padding: $base 20px;
+}
+
+.our-brands .section-title {
+  @include title-double-border;
+}
+
+.brands-list {
+  text-align: center;
+
+  @include bp-min-width($large) {
+    padding: $base 5%;
+  }
+  
+  li {
+    display: inline-block;
+    margin: 0 3% $base;
+  }
+}
+
+

@@ -1,0 +1,60 @@
+
+.page-id-2 .hero {
+  background: $hero-home no-repeat;
+  background-size: cover;
+}
+
+.home-services .services-content h2 {
+  margin-bottom: 28px;
+}
+
+.home-services .services-content p {
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.home-services .services-content a {
+  @include btn;
+}
+
+.home-services .services-list {
+  padding-top: $base;
+  
+  @include bp-min-width($large) {
+    padding-top: 60px;
+  }
+}
+
+.service {
+  margin-bottom: $base*2;
+
+  @include bp-min-width($medium) {
+    float: left;
+    width: 50%;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(2n+1) {
+    @include bp-min-width($medium) {
+      padding-right: 20px;
+    }
+  }
+  
+  &:nth-child(2n) {
+    @include bp-min-width($medium) {
+      padding-left: 20px;
+    }
+  }
+  
+  &:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: $green;
+    margin-bottom: 12px;
+  }
+}

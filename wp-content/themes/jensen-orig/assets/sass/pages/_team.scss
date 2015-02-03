@@ -1,0 +1,94 @@
+
+.page-id-94 .page-hero {
+  background: $dk-blue $hero-team no-repeat center center / cover;
+}
+
+.team-intro .wrapper {
+  text-align: center;
+
+  @include bp-min-width($large) {
+    padding: $base*4 20px;
+  }
+  
+  p {
+    @include width-8-col;
+  }
+}
+
+.our-team .wrapper {
+  padding-top: 0;
+}
+
+.our-team .section-title {
+  padding: $base 0;
+  border-top: 2px solid $lt-grey;
+  border-bottom: 2px solid $lt-grey;
+
+  @include bp-min-width($large) {
+    margin-bottom: $base*4;
+  }
+}
+
+.team-grid {
+  @include width-12-col;
+  @include cf;
+  text-align: center;
+}
+
+.team-grid .member {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: $base;
+  padding: 0 10px;
+  text-align: center;
+
+  @include bp-min-width($large) {
+    width: 30%;
+    margin-bottom: $base*2;
+  }
+}
+
+.member-image {
+  overflow: hidden;
+  width: 158px;
+  margin: 0 auto 12px;
+  border: 4px solid $lt-grey;
+  border-radius: 50%;
+}
+
+.member-position {
+  margin-bottom: 4px;
+  color: $md-blue;
+}
+
+.member-name {
+  @include font-size(24px);
+  margin-bottom: 18px;
+  color: $blue;
+
+  @include bp-min-width($large) {
+    @include font-size(32px);
+  }
+}
+
+.member-bio p {
+  @include font-size(18px);
+  @include line-height(28px);
+}
+
+.team-grid .member:nth-child(1),
+.team-grid .member:nth-child(2) {
+  @include bp-min-width($large) {
+    width: 43%;
+    margin-bottom: $base*3;
+  }
+  
+  .member-name {
+    @include font-size(30px);
+    
+    @include bp-min-width($medium) {
+      @include font-size(40px);
+    }
+  }
+}
+
