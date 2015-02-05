@@ -64,6 +64,13 @@
   }
 }
 
+.main-nav .current-menu-item a {
+  @include bp-min-width($large) {
+    box-shadow: inset 0 -4px 0 $green;
+    color: $dk-grey;
+  }
+}
+
 
 /** Mobile Menu Button **/
 

@@ -1,5 +1,7 @@
 
 var gulp = require('gulp'),
+    watch = require('gulp-watch'),
+    batch = require('gulp-batch'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -12,11 +14,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
-
-/*
-    watch = require('gulp-watch'),
-    batch = require('gulp-batch'),
-*/
 
 
 gulp.task('browser-sync', function() {
@@ -67,11 +64,21 @@ gulp.task('bs-reload', function() {
 });
 
 
-gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch('./**/*.php', ['bs-reload']);
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/js/*.js', ['scripts']);
-  gulp.watch('src/images/*', ['images']);
+gulp.task('test', function () {
+  console.log('Working!');
+});
+
+
+gulp.task('default', function () {
+    watch('src/sass/style.scss', function () {
+      console.log('Working!');
+    });
+});
+
+gulp.task('watch', function () {
+    return gulp.src('**/*.js')
+        .pipe(watch('**/*.js'))
+        .pipe(gulp.dest('./dist/js'));
 });
 
 

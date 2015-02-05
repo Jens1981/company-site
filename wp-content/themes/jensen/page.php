@@ -13,8 +13,6 @@
   	  </div>
   	</section>
 
-    <?php get_template_part( 'partials/promo-section' ); ?>
-
     <?php get_template_part( 'partials/featured-posts' ); ?>
 
 	<?php endwhile; endif; ?>

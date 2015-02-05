@@ -1,13 +1,8 @@
 
 // Site Mixins
 
-@mixin width-12-col {
-  max-width: 940px;
-  margin: 0 auto;
-}
-
 @mixin width-10-col {
-  max-width: 780px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -17,7 +12,7 @@
 }
 
 @mixin width-6-col {
-  max-width: 460px;
+  max-width: 584px;
   margin: 0 auto;
 }
 

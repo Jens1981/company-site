@@ -1,14 +1,18 @@
 
-.featured-posts {
-  background: $lt-grey;
-  
-  h2 {
-    text-align: center;
-    margin-bottom: $base*2;
-  }
+.our-work h1 {
+  @extend h2;
+  margin-bottom: $base;
+  text-align: center;
 }
 
-.featured-posts .post {
+.our-work p {
+  @include width-6-col;
+  @include font-size(17px);
+  margin-bottom: $base*2;
+  text-align: center;
+}
+
+.our-work .project-block {
   position: relative;
   min-height: 240px;
   margin-bottom: $base;
@@ -16,7 +20,8 @@
   background-size: cover;
 }
 
-.featured-posts .post a {
+
+.our-work .project-block a {
   position: absolute;
   top: 0;
   right: 0;
@@ -30,17 +35,7 @@
   }
 }
 
-.featured-posts .post-date {
-  @include font-size(13px);
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 16px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.featured-posts .post-title {
+.our-work .project-block .project-title {
   @include font-size(21px);
   @include line-height(24px);
   position: absolute;
@@ -49,9 +44,4 @@
   bottom: $base;
   color: #fff;
   font-weight: $reg;
-}
-
-.featured-posts .more-news {
-  padding-top: 12px;
-  text-align: center;
 }

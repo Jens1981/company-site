@@ -232,6 +232,7 @@
 	
 	// Image Sizes
 	add_image_size( 'news-thumb', 376, 240, true );
+	add_image_size( 'project-thumb', 376, 240, true );
 	add_image_size( 'blog-image', 620 );
 
   add_filter( 'image_size_names_choose', 'my_custom_sizes' );

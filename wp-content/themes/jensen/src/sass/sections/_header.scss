@@ -2,8 +2,9 @@
 .header {
   position: relative;
   padding: $base 0;
+  box-shadow: 0 2px 0 $lt-grey;
   text-align: center;
-  
+
   @include bp-min-width($medium) {
     padding-bottom: 0;
   }
@@ -15,6 +16,7 @@
 
 .logo {
   margin-bottom: $base;
+  
   @include bp-min-width($large) {
     @include absolute-center;
     z-index: 10;

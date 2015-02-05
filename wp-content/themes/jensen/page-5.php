@@ -37,7 +37,7 @@
 	  </div>
 	</section>
 
-  <?php get_template_part( 'partials/promo-section' ); ?>
+  <?php get_template_part( 'partials/contact-bar' ); ?>
 
 	<?php endwhile; endif; ?>
 

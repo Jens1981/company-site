@@ -10,9 +10,10 @@
 		    ?>
 		      <div class="col-1-3">
           <?php
-            $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+            $image_id = get_post_thumbnail_id();
+            $image_url = wp_get_attachment_image_src($image_id, 'news-thumb', true);
             if ( has_post_thumbnail() ) {
-    		      echo '<article class="post" style="background-image: url(' . $url . ')">';
+    		      echo '<article class="post" style="background-image: url(' . $image_url[0] . ')">';
             } else {
               echo '<article class="post">';
             }
