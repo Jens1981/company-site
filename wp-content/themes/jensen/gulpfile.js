@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
+    newer = require('gulp-newer'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
@@ -55,9 +56,11 @@ gulp.task('images', function() {
     .pipe(gulp.dest('dist/images/'));
 });
 
+
 gulp.task('bs-reload', function() {
   browserSync.reload();
 });
+
 
 gulp.task('watch', ['browser-sync'], function() {
   gulp.watch('./**/*.php', ['bs-reload']);

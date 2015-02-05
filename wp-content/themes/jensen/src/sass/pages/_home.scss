@@ -1,7 +1,11 @@
 
 .page-id-2 .hero {
-  background: $hero-home no-repeat;
+  background: $hero-home no-repeat center center;
   background-size: cover;
+
+  @include bp-min-width($large) {
+    padding: $base*6 0;
+  }
 }
 
 .home-services .services-content h2 {
@@ -21,11 +25,12 @@
   padding-top: $base;
   
   @include bp-min-width($large) {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 }
 
 .service {
+  @include title-border;
   margin-bottom: $base*2;
 
   @include bp-min-width($medium) {
@@ -47,14 +52,5 @@
     @include bp-min-width($medium) {
       padding-left: 20px;
     }
-  }
-  
-  &:before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background: $green;
-    margin-bottom: 12px;
   }
 }

@@ -21,10 +21,15 @@
   margin: 0 auto;
 }
 
-@mixin title-double-border {
-  padding: $base 0;
-  border-top: 2px solid $lt-grey;
-  border-bottom: 2px solid $lt-grey;
+@mixin title-border {
+  &:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: $green;
+    margin-bottom: 12px;
+  }
 }
 
 

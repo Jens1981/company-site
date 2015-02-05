@@ -1,13 +1,23 @@
 
 .single-post .hero {
-  padding: $base 0;
+  padding: $base*2 0;
 }
 
-.post {
-
+.single-post .post {
+  @include width-8-col;
 }
 
-.post .post-date {
+.single-post .post-date {
+  @include font-size(13px);
+  margin-bottom: 6px;
+  font-weight: $med;
+  text-transform: uppercase;
+}
+
+.single-post .post-title {
+  margin-bottom: $base;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .post figure {

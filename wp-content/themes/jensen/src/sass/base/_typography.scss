@@ -44,9 +44,9 @@ h2 {
 
 h3 {
   @include font-size(24px);
-  @include line-height(30px);
+  @include line-height(32px);
   color: $dk-grey;
-  font-weight: $med;
+  font-weight: $bold;
 }
 
 h4, h5 {

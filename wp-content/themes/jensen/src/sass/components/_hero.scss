@@ -9,16 +9,22 @@
   @include bp-min-width($medium) {
     padding: $base*4 0;
   }
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  @include width-8-col;
   
-  h1,h2,p {
-    @include width-8-col;
-    
-    &:first-child {
-      margin-bottom: $base*1.5;
-    }
+  &:first-child {
+    margin-bottom: $base*1.5;
   }
   
-  a {
-    @include btn-white;
+  &:last-child {
+    margin-bottom: 0;
   }
+}
+
+.hero a {
+  @include btn-white;
 }

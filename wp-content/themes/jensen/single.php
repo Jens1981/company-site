@@ -13,20 +13,14 @@
   
   		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
   
-        <div class="post-date"><?php the_date(); ?></div>
-  			
-  			<h2 class="entry-title"><?php the_title(); ?></h2>
-  
+        <p class="post-date"><?php the_date('M j, Y'); ?></p>
+  			<h2 class="post-title"><?php the_title(); ?></h2>
   			<div class="body">
-  				
   				<?php the_content(); ?>
-  
-  				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>
-  				
-				<div class="post-tags">
-  				<?php the_tags( __('<span class="label">Tags:</span> ','html5reset'), ', ', ''); ?>
-				</div>
-  
+  				<?php wp_link_pages(array('before' => __('Pages: ','html5reset'), 'next_or_number' => 'number')); ?>  				
+  				<div class="post-tags">
+    				<?php the_tags( __('<span class="label">Tags:</span> ','html5reset'), ', ', ''); ?>
+  				</div>
   			</div>
 			
   		</article>
