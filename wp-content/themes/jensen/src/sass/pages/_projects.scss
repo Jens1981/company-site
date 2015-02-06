@@ -1,0 +1,57 @@
+
+.project-info {
+  margin-bottom: $base;
+  
+  @include bp-min-width($large) {
+    position: relative;
+    width: 66.666%;
+    margin-bottom: $base*2;
+  }
+}
+
+.project-title {
+  margin-bottom: $base;
+  font-weight: $bold;
+
+  @include bp-min-width($large) {
+    @include font-size(32px);
+    @include line-height(32px);
+  }
+}
+
+.project-meta {
+
+  @include bp-min-width($large) {
+    @include title-border;
+    position: absolute;
+    top: 60px;
+    right: -50%;
+    width: 50%;
+    padding-left: 40px;
+    
+    &:before {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.project-meta h4 {
+  @include font-size(15px);
+  @include line-height(24px);
+  font-weight: $bold;
+  text-transform: uppercase;
+}
+
+.project-meta p {
+  color: $dk-grey;
+}
+
+.project-location {
+  margin-bottom: $base;
+}
+
+.project-info .body p {
+  @include bp-min-width($large) {
+    @include font-size(17px);
+  }
+}
