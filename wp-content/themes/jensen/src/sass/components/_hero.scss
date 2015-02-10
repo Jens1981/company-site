@@ -4,7 +4,6 @@
   padding: $base*2 0;
   background: $green;
   background-size: cover;
-  color: #fff;
   text-align: center;
 
   @include bp-min-width($medium) {
@@ -16,6 +15,7 @@
 .hero h2,
 .hero p {
   @include width-8-col;
+  color: #fff;
   
   &:first-child {
     margin-bottom: $base*1.5;

@@ -24,7 +24,7 @@
 		<header class="header">
 		  <div class="wrapper">
   			<div class="logo">
-  			  <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo.png" alt="Culinary Care"></a>
+  			  <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Culinary Care"></a>
         </div>
     		<nav class="main-nav">
           <a href="" class="btn-mobile">

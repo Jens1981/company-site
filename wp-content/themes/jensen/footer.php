@@ -3,11 +3,9 @@
       <div class="wrapper">
       
         <div class="logo-mark">
-<!--
-          <svg class="social-icon" viewBox="0 0 40 40">
-            <use xlink:href="#icon-"></use>
+          <svg class="footer-logo" viewBox="0 0 100 116.736">
+            <use xlink:href="#footer-logo"></use>
           </svg>
--->
         </div>
         
         <div class="col col-address">

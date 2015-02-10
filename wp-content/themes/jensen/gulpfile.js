@@ -70,7 +70,7 @@ gulp.task('bs-reload', function() {
 gulp.task('watch', ['browser-sync'], function() {
   gulp.watch('./**/*.php', ['bs-reload']);
   gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/js/*.js', ['scripts']);
+  gulp.watch('src/js/**/*.js', ['scripts', 'bs-reload']);
   gulp.watch('src/images/*', ['images']);
 });
 

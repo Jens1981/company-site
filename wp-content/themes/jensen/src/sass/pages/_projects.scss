@@ -9,7 +9,7 @@
   }
 }
 
-.project-title {
+.single .project-title {
   margin-bottom: $base;
   font-weight: $bold;
 
@@ -20,7 +20,6 @@
 }
 
 .project-meta {
-
   @include bp-min-width($large) {
     @include title-border;
     position: absolute;
@@ -54,4 +53,42 @@
   @include bp-min-width($large) {
     @include font-size(17px);
   }
+}
+
+.project-images {
+  position: relative;
+  
+  @include bp-min-width($large) {
+    width: 66.666%;
+  }
+}
+
+.project-images .image-caption {
+  @include bp-min-width($large) {
+    position: absolute;
+    top: 60px;
+    right: -50%;
+    width: 50%;
+    padding-left: 40px;
+  }
+}
+
+.bx-controls {
+  width: 100px;
+  @include bp-min-width($large) {
+    position: absolute;
+    top: 0;
+    right: -140px;
+  }
+  
+  a {
+    margin-right: 20px;
+  }
+}
+
+.project-images .icon-prev,
+.project-images .icon-next {
+  width: 18px;
+  height: 32px;
+  fill: $green;
 }

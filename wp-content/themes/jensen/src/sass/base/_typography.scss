@@ -53,6 +53,12 @@ h4, h5 {
   font-weight: $med;
 }
 
+.page-title {
+  @extend h2;
+  margin-bottom: $base*2;
+  text-align: center;
+}
+
 p,
 .body ul,
 .body ol {
@@ -78,13 +84,20 @@ blockquote {
 }
 
 .body h2 {
-  margin-bottom: $base;
+  @include font-size(27px);
+  margin-bottom: 4px;
+  letter-spacing: 0;
   text-transform: none;
 }
 
 .body h3,
 .body h4 {
+  @include line-height(24px);
   font-weight: $med;
+}
+
+.body h3 {
+  margin-bottom: 4px;
 }
 
 .body p,

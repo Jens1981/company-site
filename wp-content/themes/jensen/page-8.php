@@ -5,7 +5,7 @@
 	<section class="our-work">
 	  <div class="wrapper padded">
 	  
-	    <h1><?php the_title(); ?></h1>
+	    <h1 class="page-title"><?php the_title(); ?></h1>
 	    <?php the_content(); ?>
 
 	    <div class="grid work-grid">

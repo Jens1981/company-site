@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-  <section class="hero">
-    <div class="wrapper">
-      <h1 class="page-title">Ecology News</h1>
-    </div>
-  </section>
-
   <section class="main">
     <div class="wrapper bg-white side-padding">
   
@@ -26,10 +20,10 @@
   		</article>
   
   	<?php endwhile; endif; ?>
-  	
-  	<?php single_post_navigation(); ?>
 
     </div>
   </section>
+
+	<?php single_post_navigation($input = 'Post'); ?>
 
 <?php get_footer(); ?>

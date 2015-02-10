@@ -1,7 +1,7 @@
 <?php
 
 	// Theme Setup (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function stadtler_setup() {
+	function jensen_setup() {
 		load_theme_textdomain( 'stadtler', get_template_directory() . '/languages' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
@@ -9,10 +9,10 @@
 		register_nav_menu( 'primary', __( 'Navigation Menu', 'stadtler' ) );
 		add_theme_support( 'post-thumbnails' );
 	}
-	add_action( 'after_setup_theme', 'stadtler_setup' );
+	add_action( 'after_setup_theme', 'jensen_setup' );
 
 	// Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function stadtler_scripts_styles() {
+	function jensen_scripts_styles() {
 		global $wp_styles;
 
 		// Load IE Stylesheet.
@@ -20,7 +20,7 @@
 //		$wp_styles->add_data( 'stadtler-ie', 'conditional', 'lt IE 9' );
 
 	}
-	add_action( 'wp_enqueue_scripts', 'stadtler_scripts_styles' );
+	add_action( 'wp_enqueue_scripts', 'jensen_scripts_styles' );
 
 	// Services Post Type
 	add_action('init', 'services_register');
@@ -87,7 +87,7 @@
   }
   
 	// WP Title (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	function stadtler_wp_title( $title, $sep ) {
+	function jensen_wp_title( $title, $sep ) {
 		global $paged, $page;
 
 		if ( is_feed() )
@@ -107,7 +107,7 @@
 
 		return $title;
 	}
-	add_filter( 'wp_title', 'stadtler_wp_title', 10, 2 );
+	add_filter( 'wp_title', 'jensen_wp_title', 10, 2 );
 
 
 //OLD STUFF BELOW
@@ -153,55 +153,34 @@
 	function post_navigation() {
 	  $prev_page = get_previous_posts_link('Previous Page');
 	  $next_page = get_next_posts_link('Next Page');
-		echo '<div class="post-nav">';
+		echo '<div class="posts-nav">';
 	  if ($prev_page) {
-  	  echo '<span class="post-nav-item">'.$prev_page.'</span>';
+  	  echo $prev_page;
 	  } else {
-  	  echo '<span class="post-nav-item">Previous Page</span>';
+  	  echo '<span class="nav-item">Previous Page</span>';
 	  }
-		echo ' <span class="bullet">&bull;</span> ';
 	  if ($next_page) {
-  	  echo '<span class="post-nav-item">'.$next_page.'</span>';
+  	  echo $next_page;
 	  } else {
-  	  echo '<span class="post-nav-item">Next Page</span>';
+  	  echo '<span class="nav-item">Next Page</span>';
 	  }
 		echo '</div>';
 	}
-
+	
   // Single Navigation
-	function single_post_navigation() {
+	function single_post_navigation($input) {
 	  $prev_post = get_previous_post();
 	  $next_post = get_next_post();
-		echo '<div class="post-nav">';
+		echo '<div class="posts-nav">';
 	  if ($prev_post) {
-  	  echo '<span class="post-nav-item"><a href="'.get_permalink( $prev_post->ID ).'">Previous Post</a></span>';
+  	  echo '<a href="'.get_permalink( $prev_post->ID ).'">Previous '. $input .'</a>';
 	  } else {
-  	  echo '<span class="post-nav-item">Previous Post</span>';
+  	  echo '<span class="nav-item">Previous '. $input .'</span>';
 	  }
-		echo ' <span class="bullet">&bull;</span> ';
 	  if ($next_post) {
-  	  echo '<span class="post-nav-item"><a href="'.get_permalink( $next_post->ID ).'">Next Post</a></span>';
+  	  echo '<a href="'.get_permalink( $next_post->ID ).'">Next '. $input .'</a>';
 	  } else {
-  	  echo '<span class="post-nav-item">Next Post</span>';
-	  }
-		echo '</div>';
-	}
-
-  // Single Navigation
-	function testimonial_post_navigation() {
-	  $prev_post = get_previous_post();
-	  $next_post = get_next_post();
-		echo '<div class="post-nav">';
-	  if ($prev_post) {
-  	  echo '<span class="post-nav-item"><a href="'.get_permalink( $prev_post->ID ).'">Previous</a></span>';
-	  } else {
-  	  echo '<span class="post-nav-item">Previous Post</span>';
-	  }
-		echo ' <span class="bullet">&bull;</span> ';
-	  if ($next_post) {
-  	  echo '<span class="post-nav-item"><a href="'.get_permalink( $next_post->ID ).'">Next</a></span>';
-	  } else {
-  	  echo '<span class="post-nav-item">Next Post</span>';
+  	  echo '<span class="nav-item">Next '. $input .'</span>';
 	  }
 		echo '</div>';
 	}
@@ -232,8 +211,9 @@
 	
 	// Image Sizes
 	add_image_size( 'news-thumb', 376, 240, true );
-	add_image_size( 'project-thumb', 376, 240, true );
 	add_image_size( 'blog-image', 620 );
+	add_image_size( 'project-thumb', 376, 240, true );
+	add_image_size( 'project-image', 792, 432, true );
 
   add_filter( 'image_size_names_choose', 'my_custom_sizes' );
   function my_custom_sizes( $sizes ) {

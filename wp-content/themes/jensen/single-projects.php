@@ -22,7 +22,7 @@
       </div>
       
       <div class="project-images">
-
+        <div class="slider">
         <?php
         $args = array(
          'post_type' => 'attachment',
@@ -30,27 +30,26 @@
          'post_status' => null,
          'post_parent' => $post->ID
         );
-      
         $attachments = get_posts( $args );
         if ( $attachments ) {
           foreach ( $attachments as $attachment ) {
             echo '<div class="project-image">';
-            echo wp_get_attachment_image( $attachment->ID, 'full' );
-            echo '<p>';
+            echo wp_get_attachment_image( $attachment->ID, 'project-image' );
+            echo '<p class="image-caption">';
             echo apply_filters( 'the_title', $attachment->post_excerpt );
             echo '</p></div>';
           }
         }
         ?>
-        
+        </div>
       </div>
   	<?php endwhile; endif; ?>
 
     </div>
   </section>
 
-  <div class="project-nav">
-  	<?php single_post_navigation(); ?>
-  </div>
+	<?php single_post_navigation($input = 'Project'); ?>
 
 <?php get_footer(); ?>
+
+<?php get_template_part( 'partials/svg' ); ?>

@@ -1,8 +1,6 @@
 
-.our-work h1 {
-  @extend h2;
+.our-work .page-title {
   margin-bottom: $base;
-  text-align: center;
 }
 
 .our-work p {
@@ -19,7 +17,6 @@
   background: $post-thumb-default no-repeat;
   background-size: cover;
 }
-
 
 .our-work .project-block a {
   position: absolute;

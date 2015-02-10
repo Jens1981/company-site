@@ -2,7 +2,7 @@
 		  <div class="wrapper padded">
   		    
 		    <h2>Ecology News</h2>
-		    <div class="grid">
+		    <div class="grid posts-grid">
 		    <?php
 		    $args = array('posts_per_page' => 3);
 		    $latest_post = get_posts( $args );
