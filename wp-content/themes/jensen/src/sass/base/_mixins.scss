@@ -27,6 +27,12 @@
   }
 }
 
+@mixin intro {
+  @include width-6-col;
+  @include font-size(17px);
+  margin-bottom: $base*2;
+  text-align: center;
+}
 
 // Clearfix
 @mixin cf {

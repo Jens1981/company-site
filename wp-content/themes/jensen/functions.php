@@ -145,6 +145,10 @@
     return is_array($var) ? array_intersect($var, array('current-menu-item', 'current-menu-parent', 'current-menu-ancestor')) : '';
   }
   add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
+  
+  // Remove Contact Plugin CSS/JS
+  add_filter( 'wpcf7_load_js', '__return_false' );
+  add_filter( 'wpcf7_load_css', '__return_false' );
 
 	// Custom Menu
 	register_nav_menu( 'primary', __( 'Navigation Menu', 'stadtler' ) );

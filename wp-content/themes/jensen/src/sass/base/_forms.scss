@@ -1,9 +1,11 @@
 
+div.wpcf7 {
+  @include width-6-col;
+}
+
 .form-item {
-  position: relative;
   width: 100%;
   margin-bottom: $base;
-  background: $lt-grey;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -11,10 +13,7 @@
 }
 
 label {
-  @include font-size(20px);
-  position: absolute;
-  top: 10px;
-  left: 14px;
+  @include font-size(17px);
 }
 
 input[type="text"],
@@ -22,11 +21,11 @@ input[type="email"],
 input[type="password"],
 textarea,
 select {
-  @include font-size(20px);
+  @include font-size(17px);
   width: 100%;
   padding: 10px 14px;
-  background: transparent;
-  border: none;
+  background: none;
+  border: 1px solid $md-grey;
   box-shadow: none;
   color: $dk-grey;
   font-family: $sans;
@@ -40,6 +39,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus {
+  outline: none;
 }
 
 textarea {
@@ -174,7 +174,6 @@ input[type="submit"], button {
 
 .form-button {
   padding-bottom: 8px;
-  text-align: center;
 }
 
 

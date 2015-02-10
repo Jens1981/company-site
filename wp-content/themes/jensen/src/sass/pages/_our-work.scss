@@ -4,10 +4,7 @@
 }
 
 .our-work p {
-  @include width-6-col;
-  @include font-size(17px);
-  margin-bottom: $base*2;
-  text-align: center;
+  @include intro;
 }
 
 .our-work .project-block {
