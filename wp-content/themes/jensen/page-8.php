@@ -21,13 +21,13 @@
             if ( has_post_thumbnail() ) {
     		      echo '<div class="project-block" style="background-image: url(' . $image_url[0] . ')">';
             } else {
-              echo '<article class="project-block">';
+              echo '<div class="project-block">';
             }
           ?>
 		          <a href="<?php the_permalink(); ?>">
     		        <h3 class="project-title"><?php the_title(); ?></h3>
 		          </a>
-  		      </article>
+  		      </div>
 		      </div>
 		    <?php endforeach; 
         wp_reset_postdata();?>
@@ -35,7 +35,7 @@
 
 	  </div>
 	</section>
-
+	
   <?php get_template_part( 'partials/contact-bar' ); ?>
 
 	<?php endwhile; endif; ?>

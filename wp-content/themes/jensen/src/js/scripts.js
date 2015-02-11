@@ -10,6 +10,31 @@ $(function(){
     });
   }
   
+  formValidation = function() {
+  	$('.wpcf7-form').submit(function(e) {
+  		e.preventDefault();
+  		var errorcount = 0;
+  		
+  		inputField = $('input[type="text"], input[type="email"]');
+  		
+  		$(inputField).each(function() {
+  	    inputVal = $(this).val();
+    		if(inputVal == '') {
+          $(this).addClass('error');
+          errorcount++;
+    		}
+  		});
+    });
+
+  	$('input[type="text"], input[type="email"]').focus(function() {
+      if ($(this).hasClass('error')) {
+        $(this).keyup(function() {
+          $(this).removeClass('error');
+        });
+      }
+  	});
+  }
+  
   $('.project-images .slider').bxSlider({
     mode: 'fade',
     pager: false,
@@ -20,5 +45,6 @@ $(function(){
   $(".body").fitVids();
   
   mobileNav();
+  formValidation();
 
 });

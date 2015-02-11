@@ -147,7 +147,7 @@
   add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);
   
   // Remove Contact Plugin CSS/JS
-  add_filter( 'wpcf7_load_js', '__return_false' );
+  //add_filter( 'wpcf7_load_js', '__return_false' );
   add_filter( 'wpcf7_load_css', '__return_false' );
 
 	// Custom Menu
@@ -157,18 +157,20 @@
 	function post_navigation() {
 	  $prev_page = get_previous_posts_link('Previous Page');
 	  $next_page = get_next_posts_link('Next Page');
-		echo '<div class="posts-nav">';
-	  if ($prev_page) {
-  	  echo $prev_page;
-	  } else {
-  	  echo '<span class="nav-item">Previous Page</span>';
-	  }
-	  if ($next_page) {
-  	  echo $next_page;
-	  } else {
-  	  echo '<span class="nav-item">Next Page</span>';
-	  }
-		echo '</div>';
+	  if($prev_page || $next_page) {
+  		echo '<div class="posts-nav">';
+  	  if ($prev_page) {
+    	  echo $prev_page;
+  	  } else {
+    	  echo '<span class="nav-item">Previous Page</span>';
+  	  }
+  	  if ($next_page) {
+    	  echo $next_page;
+  	  } else {
+    	  echo '<span class="nav-item">Next Page</span>';
+  	  }
+  		echo '</div>';
+		}
 	}
 	
   // Single Navigation

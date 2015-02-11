@@ -53,4 +53,11 @@ a {
 .cta-link {
   @include font-size(18px);
   font-weight: $med;
+  
+  .icon-next {
+    width: 8px;
+    margin-left: 6px;
+    fill: $green;
+    vertical-align: middle;
+  }
 }

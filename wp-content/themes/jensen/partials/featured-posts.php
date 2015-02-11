@@ -27,7 +27,7 @@
 		    <?php endforeach; 
         wp_reset_postdata();?>
         </div>
-        <p class="more-news"><a href="/news/" class="cta-link">More News</a></p>
+        <p class="more-news"><a href="/news/" class="cta-link">More News <svg class="icon-next" viewBox="0 0 18 33"><use xlink:href="#icon-next"></use></svg></a></p>
 
 		  </div>
 		</section>

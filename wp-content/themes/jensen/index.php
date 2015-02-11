@@ -32,5 +32,7 @@
 	<?php post_navigation(); ?>
   
 	<?php endif; ?>
+
+  <?php get_template_part( 'partials/contact-bar' ); ?>
 	
 <?php get_footer(); ?>
