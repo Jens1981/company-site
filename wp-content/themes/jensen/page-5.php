@@ -17,7 +17,7 @@
         $args = array( 'post_type' => 'services', 'posts_per_page' => -1 );
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-		    <div class="col-1-3">
+		    <div class="col-1-2">
         	<h3><?php the_title(); ?></h3>
       		<?php the_content(); ?>
 		    </div>
@@ -29,9 +29,7 @@
 	</section>
 
 	<section class="about-jens">
-	  <div class="jens-image">
-	  
-	  </div>
+	  <div class="jens-image"></div>
 	  <div class="jens-bio">
   		<?php the_field('about_jens'); ?>
 	  </div>

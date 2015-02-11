@@ -14,6 +14,9 @@ div.wpcf7 {
 
 label {
   @include font-size(17px);
+  display: block;
+  margin-bottom: 4px;
+  font-weight: $med;
 }
 
 input[type="text"],

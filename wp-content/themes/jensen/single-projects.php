@@ -51,5 +51,3 @@
 	<?php single_post_navigation($input = 'Project'); ?>
 
 <?php get_footer(); ?>
-
-<?php get_template_part( 'partials/svg' ); ?>

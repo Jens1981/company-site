@@ -1,0 +1,43 @@
+
+.posts-grid .post {
+  position: relative;
+  min-height: 240px;
+  margin-bottom: $base;
+  background: $post-thumb-default no-repeat;
+  background-size: cover;
+}
+
+.posts-grid .post a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background: rgba(#000, 0.5);
+  
+  &:hover {
+    background: rgba(#000, 0.3);
+  }
+}
+
+.posts-grid .post-date {
+  @include font-size(13px);
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 16px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.posts-grid .post-title {
+  @include font-size(21px);
+  @include line-height(24px);
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: $base;
+  color: #fff;
+  font-weight: $reg;
+}

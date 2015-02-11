@@ -1,0 +1,17 @@
+
+.bx-wrapper {
+  position: relative;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.bx-wrapper img {
+  display: block;
+}
+
+.bx-viewport {
+  overflow: visible !important;
+  -webkit-transform: translatez(0);
+}

@@ -37,7 +37,9 @@
   </div>
 
 	<?php wp_footer(); ?>
+
+  <?php get_template_part( 'partials/svg' ); ?>
 	
-<script src="<?php bloginfo('template_directory'); ?>/dist/js/main.js"></script>
+  <script src="<?php bloginfo('template_directory'); ?>/dist/js/main.js"></script>
 </body>
 </html>

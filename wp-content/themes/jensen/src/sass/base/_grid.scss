@@ -4,7 +4,7 @@ $pad: 20px;
   @include cf;
   
   @include bp-min-width($large) {
-    margin: 0 -10px -24px;
+    margin: 0 -20px -24px;
   }
 }
 
@@ -45,6 +45,10 @@ $pad: 20px;
 .col-1-2 {
   @include bp-min-width($large) {
     width: 50%;
+
+    &:nth-child(2n+1) {
+      clear: left;
+    }
   }
 }
 
