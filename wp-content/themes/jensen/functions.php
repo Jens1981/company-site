@@ -217,7 +217,7 @@
 	
 	// Image Sizes
 	add_image_size( 'news-thumb', 376, 240, true );
-	add_image_size( 'blog-image', 620 );
+	add_image_size( 'blog-image', 792 );
 	add_image_size( 'project-thumb', 376, 240, true );
 	add_image_size( 'project-image', 792, 432, true );
 
