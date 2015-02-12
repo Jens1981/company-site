@@ -10,7 +10,7 @@
 	<section class="about-services">
 	  <div class="wrapper padded">
 	  
-	    <h2>Our Services</h2>
+	    <h2 class="page-title">Our Services</h2>
 
 	    <div class="grid services-grid">
         <?php

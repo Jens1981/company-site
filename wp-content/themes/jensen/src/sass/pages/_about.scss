@@ -15,8 +15,11 @@
 }
 
 .about-services h2 {
-  margin-bottom: $base*3;
-  text-align: center;
+  margin-bottom: $base*2;
+  
+  @include bp-min-width($large) {
+    margin-bottom: $base*3;
+  }
 }
 
 .services-grid {
@@ -37,8 +40,6 @@
   margin-bottom: 12px;
 }
 
-
-
 .about-jens {
   @include bp-min-width($large) {
     display: table;
@@ -55,6 +56,11 @@
     height: 180px;
     margin: $base*2 5% 0 $base;
     border-radius: 50%;
+  }
+
+  @include bp-max-width($tiny) {
+    width: 120px;
+    height: 120px;
   }
 
   @include bp-min-width($large) {

@@ -55,8 +55,12 @@ h4, h5 {
 
 .page-title {
   @extend h2;
-  margin-bottom: $base*2;
+  margin-bottom: $base;
   text-align: center;
+
+  @include bp-min-width($medium) {
+    margin-bottom: $base*2;
+  }
 }
 
 p,

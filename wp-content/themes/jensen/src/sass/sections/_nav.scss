@@ -54,11 +54,11 @@
   }
   
   &:hover {
-    @include bp-max-width($large) {
+    @include bp-max-width($medium) {
       color: #fff;
     }
 
-    @include bp-min-width($large) {
+    @include bp-min-width($medium) {
       box-shadow: inset 0 -4px 0 $green;
       color: $dk-grey;
     }
@@ -66,7 +66,7 @@
 }
 
 .main-nav .current-menu-item a {
-  @include bp-min-width($large) {
+  @include bp-min-width($medium) {
     box-shadow: inset 0 -4px 0 $green;
     color: $dk-grey;
   }

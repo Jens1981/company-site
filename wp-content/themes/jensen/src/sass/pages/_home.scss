@@ -37,10 +37,6 @@
     float: left;
     width: 50%;
   }
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &:nth-child(2n+1) {
     @include bp-min-width($medium) {
