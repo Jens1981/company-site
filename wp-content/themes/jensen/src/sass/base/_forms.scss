@@ -168,9 +168,10 @@ textarea {
 
 input[type="submit"], button {
 	@include global-transition;
+  @include btn;
 	min-width: 180px;
   border: none;
-  @include btn;
+  outline: none;
   cursor: pointer;
   font-family: $sans;
 }

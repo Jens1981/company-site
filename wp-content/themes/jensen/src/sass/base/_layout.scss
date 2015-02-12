@@ -26,10 +26,10 @@ body {
 }
 
 .main .wrapper {
-  padding: $base*1.5 20px;
+  padding: $base*1.5 0;
 
   @include bp-min-width($medium) {
-    padding: $base*2 20px;
+    padding: $base*2 0;
   }
 }
 

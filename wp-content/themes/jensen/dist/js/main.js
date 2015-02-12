@@ -126,7 +126,7 @@ $(function(){
   		});
     });
 
-  	$('input[type="text"], input[type="email"]').focus(function() {
+  	$(inputField).focus(function() {
       if ($(this).hasClass('error')) {
         $(this).keyup(function() {
           $(this).removeClass('error');
@@ -145,6 +145,6 @@ $(function(){
   $(".body").fitVids();
   
   mobileNav();
-  formValidation();
+  //formValidation();
 
 });
