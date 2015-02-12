@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   
   <section class="main">
-    <div class="wrapper">
+    <div class="wrapper padded">
   	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   	      
       <div class="project-info">

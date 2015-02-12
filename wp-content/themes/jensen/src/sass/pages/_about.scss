@@ -4,13 +4,10 @@
   background-size: cover;
 }
 
-.page-id-5 .hero h2 {
+.page-id-5 .hero h1 {
   @include font-size(24px);
-  @include line-height(32px);
-  color: #fff;
+  @include line-height(30px);
   font-weight: $reg;
-  letter-spacing: 0;
-  text-transform: none;
 }
 
 .about-services .wrapper {
@@ -40,23 +37,42 @@
   margin-bottom: 12px;
 }
 
+
+
 .about-jens {
-  display: table;
+  @include bp-min-width($large) {
+    display: table;
+  }
 }
 
 .jens-image {
-  display: table-cell;
-  width: 50%;
   background: $dk-grey $pic-jens no-repeat center center;
   background-size: cover;
+
+  @include bp-max-width($large) {
+    float: right;
+    width: 180px;
+    height: 180px;
+    margin: $base*2 5% 0 $base;
+    border-radius: 50%;
+  }
+
+  @include bp-min-width($large) {
+    display: table-cell;
+    width: 50%;
+  }
 }
 
 .jens-bio {
-  display: table-cell;
-  width: 50%;
-  padding: $base*3 3.5%;
+  padding: $base*2 5%;
   background: $green;
   color: #fff;
+
+  @include bp-min-width($large) {
+    display: table-cell;
+    width: 50%;
+    padding: $base*3 3.5%;
+  }
 }
 
 .jens-bio h3 {
@@ -78,7 +94,5 @@
   color: #fff;
   font-weight: $med;
 }
-
-
 
 

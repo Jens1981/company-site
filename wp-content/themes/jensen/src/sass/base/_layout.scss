@@ -16,22 +16,18 @@ body {
   margin: 0 auto;
 
   @include bp-min-width($medium) {
-    width: 92%;
     max-width: 1208px;
   }
   
   &.padded {
-    padding: $base*3 0;
-  }
-}
-
-.main .wrapper {
-  padding: $base*1.5 0;
-
-  @include bp-min-width($medium) {
     padding: $base*2 0;
+
+    @include bp-min-width($medium) {
+      padding: $base*3 0;
+    }
   }
 }
+
 
 .page-template-default .body {
   @include width-8-col;

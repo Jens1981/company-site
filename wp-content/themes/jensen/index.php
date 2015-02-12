@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <section class="main">
-    <div class="wrapper ">
+    <div class="wrapper padded">
   
       <h1 class="page-title">Ecology News</h1>
       
