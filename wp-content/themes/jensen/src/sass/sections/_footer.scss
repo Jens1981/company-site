@@ -6,10 +6,10 @@
 
   .wrapper {
     position: relative;
-    padding: $base 0;
+    padding: $base*1.5 0;
 
     @include bp-min-width($large) {
-      padding: $base*2 0;
+      padding: $base*2.5 0;
     }
   }
 }
@@ -36,21 +36,60 @@
   }
 }
 
+.footer-grid {
+  @include bp-max-width($large) {
+    margin: 0 -20px;
+  }
+}
+
 .footer .col {
   float: left;
-  width: 25.8%;
-  padding-right: 11.7%;
-  
-  &:last-of-type {
-    width: 14.125%;
-    padding-right: 0;
+  width: 50%;
+  margin: 0;
+
+  @include bp-max-width($medium) {
+    padding: 0 20px;
+  }
+
+  @include bp-min-width($medium) {
+    width: 25%;
+  }
+
+  @include bp-min-width($large) {
+    width: 25.8%;
+    padding-right: 11.7%;
   }
 }
 
 .footer .col-address {
-  width: 34.125%;
-  padding-left: 100px;
-/*   margin-left: 8.5%; */
+  @include bp-max-width($medium) {
+    margin-bottom: $base;
+  }
+
+  @include bp-min-width($large) {
+    width: 34.125%;
+    padding-left: 100px;
+  }
+}
+
+.footer .col-contact {
+  @include bp-max-width($medium) {
+    margin-bottom: $base;
+  }
+}
+
+.footer .col-follow {
+  @include bp-max-width($medium) {
+    clear: left;
+  }
+}
+
+.footer .col-copyright {
+
+  @include bp-min-width($large) {
+    width: 14.125%;
+    padding-right: 0;
+  }
 }
 
 .footer .col-copyright p {
@@ -64,8 +103,12 @@
 
 .logo-mark {
   position: absolute;
-  top: 44px;
+  top: 58px;
   left: 0;
+
+  @include bp-max-width($large) {
+    display: none;
+  }
 }
 
 .footer-logo {
