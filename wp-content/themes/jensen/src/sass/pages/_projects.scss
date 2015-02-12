@@ -20,6 +20,7 @@
 }
 
 .project-meta {
+  margin-bottom: $base;
   @include bp-min-width($large) {
     @include title-border;
     position: absolute;
@@ -47,6 +48,12 @@
 
 .project-location {
   margin-bottom: $base;
+
+  @include bp-max-width($large) {
+    float: left;
+    width: 50%;
+    max-width: 200px;
+  }
 }
 
 .project-info .body p {
@@ -61,9 +68,21 @@
   @include bp-min-width($large) {
     width: 66.666%;
   }
+  
+  img {
+    width: 100%;
+  }
 }
 
 .project-images .image-caption {
+  margin: 12px 0;
+  font-style: italic;
+
+  @include bp-max-width($large) {
+    @include font-size(13px);
+    @include line-height(19px);
+  }
+
   @include bp-min-width($large) {
     position: absolute;
     top: 60px;
@@ -74,14 +93,22 @@
 }
 
 .bx-controls {
-  width: 100px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 100;
+
   @include bp-min-width($large) {
-    position: absolute;
     top: 0;
     right: -140px;
+    width: 100px;
   }
+}
+
+.bx-controls a {
+  display: inline-block;
   
-  a {
+  &:first-of-type {
     margin-right: 20px;
   }
 }
@@ -90,5 +117,9 @@
 .project-images .icon-next {
   width: 18px;
   height: 32px;
-  fill: $green;
+  fill: #fff;
+
+  @include bp-min-width($large) {
+    fill: $green;
+  }
 }

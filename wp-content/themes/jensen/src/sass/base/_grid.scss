@@ -2,6 +2,7 @@ $pad: 20px;
 
 .grid {
   @include cf;
+  margin-bottom: -24px;
   
   @include bp-min-width($large) {
     margin: 0 -20px -24px;
