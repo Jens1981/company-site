@@ -44,12 +44,13 @@
 
   @include bp-max-width($medium) {
     padding: 12px;
-    color: #fff;
     background: $dk-grey;
+    border-top: 1px solid $grey;
+    color: #fff;
   }
 
   @include bp-min-width($medium) {
-    padding: $base 0 20px;
+    padding: 0 0 20px;
   }
   
   &:hover {
