@@ -32,6 +32,7 @@
 	  <div class="jens-image"></div>
 	  <div class="jens-bio">
   		<?php the_field('about_jens'); ?>
+  		<p><a href="/contact-us/" class="cta-link">Contact Jens <svg class="icon-next" viewBox="0 0 18 33"><use xlink:href="#icon-next"></use></svg></a></p>
 	  </div>
 	</section>
 
