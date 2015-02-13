@@ -9,6 +9,10 @@
 }
 
 .featured-posts .more-news {
-  padding-top: 12px;
+  padding-top: $base;
   text-align: center;
+
+  @include bp-min-width($large) {
+    padding-top: $base*2;
+  }
 }

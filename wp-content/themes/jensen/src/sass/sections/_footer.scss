@@ -40,6 +40,10 @@
   @include bp-max-width($large) {
     margin: 0 -20px;
   }
+
+  @include bp-max-width($tiny) {
+    margin: 0 -5%;
+  }
 }
 
 .footer .col {
@@ -49,6 +53,10 @@
 
   @include bp-max-width($medium) {
     padding: 0 20px;
+  }
+
+  @include bp-max-width($tiny) {
+    padding: 0 5%;
   }
 
   @include bp-min-width($medium) {
