@@ -1,11 +1,12 @@
 body {
-  background: #fff;
+  background: $md-grey;
 }
 
 .container {
+  background: #fff;
   @include bp-min-width($medium) {
     @include cf;
-    max-width: 1600px;
+    max-width: 1550px;
     margin: 0 auto;
   }
 }
