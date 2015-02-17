@@ -38,14 +38,69 @@
   @include bp-min-width($large) {
     @include font-size(21px);
   }
-  
-  .post-nav-item {
-  }
-  
-  a {
-  }
-  
-  .bullet {
-    margin: 0 10px;
+}
+
+.post-content {
+  @include cf;
+
+  @include bp-min-width($small) {
+    position: relative;
+    padding-right: 162px;
   }
 }
+
+.post-share {
+  @include cf;
+  margin-bottom: $base;
+  border-top: 1px solid $lt-grey;
+  border-bottom: 1px solid $lt-grey;
+
+  @include bp-min-width($small) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 122px;
+  }
+}
+
+.post-share a {
+  display: block;
+  padding: 12px 0;
+  color: $dk-grey;
+
+  @include bp-max-width($small+1) {
+    float: left;
+    margin-right: 10px;
+  }
+
+  @include bp-min-width($small) {
+    border-bottom: 1px solid $lt-grey;
+  }
+  
+  &:hover {
+    color: $green;
+  }
+  
+  &:hover svg {
+    fill: $green;
+  }
+}
+
+.post-share svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  fill: $dk-grey;
+}
+
+.post-share .share-label {
+  @include font-size(15px);
+  vertical-align: -2px;
+
+  @include bp-max-width($small+1) {
+    display: none;
+  }
+}
+
