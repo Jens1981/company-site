@@ -23,8 +23,8 @@
   
           <div class="col col-follow">
             <h4>Follow Us</h4>
-            <p><a href="">Twitter</a></p>
-            <p><a href="">Facebook</a></p>
+            <p><a href="https://twitter.com/JensenEcology" target="_blank">Twitter</a></p>
+            <p><a href="https://www.facebook.com/pages/Jensen-Ecology/1437468976544316" target="_blank">Facebook</a></p>
           </div>
           
           <div class="col col-copyright">
