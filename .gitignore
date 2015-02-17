@@ -84,3 +84,6 @@ node_modules/
 
 # SASS Cache
 .sass-cache
+
+# Favicon
+!favicon.png
