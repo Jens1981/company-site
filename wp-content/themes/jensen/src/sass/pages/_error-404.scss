@@ -1,11 +1,6 @@
 
-.main-404 {
+.error404 .main .wrapper {
   text-align: center;
-  
-  h3 {
-    @include font-size(30px);
-    padding-bottom: $base;
-  }
   
   ul {
     margin-bottom: $base*2;
@@ -14,5 +9,8 @@
   li {
     @include font-size(21px);
     @include line-height(32px);
+  }
+  @include bp-min-width($medium) {
+    min-height: 400px;
   }
 }
