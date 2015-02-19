@@ -15,7 +15,11 @@
 }
 
 .logo {
-  margin-bottom: $base;
+  margin: 0 auto $base;
+
+  @include bp-max-width($medium) {
+    width: 160px;
+  }
   
   @include bp-min-width($large) {
     @include absolute-center;
