@@ -3,7 +3,8 @@
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
 		<section class="hero">
-		  <div class="wrapper">
+		  <div class="home-hero-img animate"></div>
+		  <div class="wrapper animate">
   			<?php the_field('hero'); ?>
 		  </div>
 		</section>

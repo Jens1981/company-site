@@ -118,12 +118,10 @@ $(function(){
       nextText: '<svg class="icon-next" viewBox="0 0 18 33"><use xlink:href="#icon-next"></use></svg>'
     });
   }
-/*
-
-  $('project-images img').load(function() {
-    projectSlider();
+  
+  $(window).on('load', function() {
+    $('.animate').addClass('fade-in');
   });
-*/
   
   $(".body").fitVids();
   
